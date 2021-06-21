@@ -111,35 +111,35 @@ describe('Carousel component', () => {
     expect(classListContains(circles[0], 'active')).toBeTruthy();
 
     // Clicking the left button should move the carousel
-    fireEvent['click'](leftButton);
+    fireEvent.click(leftButton);
 
     // The first card should now be `next` and fourth circle active
     expect(classListContains(cards[0], 'next')).toBeTruthy();
     expect(classListContains(circles[3], 'active')).toBeTruthy();
 
     // Clicking the left button should move the carousel again
-    fireEvent['click'](leftButton);
+    fireEvent.click(leftButton);
 
     // The first card should now be hidden and third circle active
     expect(classListContains(cards[0], 'hide')).toBeTruthy();
     expect(classListContains(circles[2], 'active')).toBeTruthy();
 
     // Clicking the right button should go forward again
-    fireEvent['click'](rightButton);
+    fireEvent.click(rightButton);
 
     // The first card should be `next` and fourth circle active
     expect(classListContains(cards[0], 'next')).toBeTruthy();
     expect(classListContains(circles[3], 'active')).toBeTruthy();
 
     // Clicking the right button should go back to first card
-    fireEvent['click'](rightButton);
+    fireEvent.click(rightButton);
 
     // The first card should be shown and first circle active
     expect(classListContains(cards[0], 'show')).toBeTruthy();
     expect(classListContains(circles[0], 'active')).toBeTruthy();
 
     // Clicking the third circle shows third card and activates third circle
-    fireEvent['click'](circles[2]);
+    fireEvent.click(circles[2]);
 
     // The first card should be hidden
     expect(classListContains(cards[0], 'hide')).toBeTruthy();

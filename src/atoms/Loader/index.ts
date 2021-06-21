@@ -1,2 +1,2 @@
-export { default as Loader } from './Loader';
-export * from './Loader.model';
+export { default as Loader } from "./Loader";
+export * from "./Loader.model";

@@ -81,13 +81,13 @@
     color: $brand-orange;
 
     &:hover {
-      border-color: $brand-orange-hover;
-      color: $brand-orange-hover;
+      border-color: $brand-orange-6;
+      color: $brand-orange-6;
       transition: all 0.1s ease-in-out;
     }
     &:active {
-      border-color: $brand-orange-6;
-      color: $brand-orange-6;
+      border-color: $brand-orange-7;
+      color: $brand-orange-7;
       transition: all 0.1s ease-in-out;
     }
     &:disabled {

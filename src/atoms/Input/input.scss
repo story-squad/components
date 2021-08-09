@@ -1,0 +1,60 @@
+@import "../../styles/index.scss";
+.input-wrapper {
+  width: 320px;
+  position: relative;
+  .icon {
+    position: absolute;
+    color: $gray-4;
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .icon-left {
+    left: 12px;
+  }
+  .icon-right {
+    right: 12px;
+  }
+  .input {
+    width: 320px;
+    height: 45px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 12px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: $gray-4;
+    outline-width: 0;
+    &.icon-true {
+      padding-left: 42px;
+    }
+    &.default {
+      border: 1px solid #b7b7b8;
+      box-sizing: border-box;
+      border-radius: 8px;
+    }
+  }
+
+  .input:hover {
+    border: 1px solid #28a9fa;
+    box-shadow: 0px 0px 4px rgba(0, 109, 199, 0.4);
+  }
+
+  .input:focus-visible {
+    border: 1px solid #006dc7;
+    box-shadow: 0px 0px 4px rgba(0, 109, 199, 0.4);
+  }
+  // this setts the collors for icons and input
+  .input:focus-visible + .icon {
+    color: $gray-8;
+  }
+  .input[type="text"] {
+    color: $gray-8;
+  }
+}

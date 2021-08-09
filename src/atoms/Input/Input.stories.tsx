@@ -37,7 +37,7 @@ export default {
       defaultValue: "text",
     },
     style: {
-      options: ["default"],
+      options: ["default", "warning", "success", "error"],
       control: { type: "radio" },
       labels: { default: "default" },
       defaultValue: "default",

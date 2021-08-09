@@ -31,13 +31,22 @@
     line-height: 24px;
     color: $gray-4;
     outline-width: 0;
+    box-sizing: border-box;
+    border-radius: 8px;
     &.icon-true {
       padding-left: 42px;
     }
     &.default {
       border: 1px solid #b7b7b8;
-      box-sizing: border-box;
-      border-radius: 8px;
+    }
+    &.success {
+      border: 1px solid #04d847;
+    }
+    &.warning {
+      border: 1px solid #e4b200;
+    }
+    &.error {
+      border: 1px solid #e40029;
     }
   }
 

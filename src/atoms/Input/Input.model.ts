@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-type InputStyleTypes = "default";
+type InputStyleTypes = "default" | "success" | "error" | "warning";
 
 type InputFieldTypes =
   | "text"

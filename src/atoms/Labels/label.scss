@@ -1,0 +1,23 @@
+@import "../../styles/variables.scss";
+
+.label {
+  font-family: Mulish;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 20px;
+  color: $gray-7;
+  .require {
+    color: $dust-red;
+    margin-right: 4px;
+  }
+  .optional {
+    margin-left: 5px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 20px;
+    color: $gray-5;
+  }
+}

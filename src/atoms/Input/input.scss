@@ -1,68 +1,59 @@
-@import "../../styles/index.scss";
+@import "../../styles/variables.scss";
+
 .input-wrapper {
-  width: 320px;
-  position: relative;
-  .icon {
-    position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid $gray-3;
+  border-radius: 8px;
+  &.success {
+    border: 1px solid $success;
+  }
+  &.warning {
+    border: 1px solid $warning;
+  }
+  &.error {
+    border: 1px solid $error;
+  }
+  svg {
     color: $gray-4;
-    top: 0;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .icon-left {
-    left: 12px;
-  }
-  .icon-right {
-    right: 12px;
+    font-size: 2rem;
+    line-height: 2rem;
+    &:first-child {
+      margin-left: 1.2rem;
+    }
+    &:last-child {
+      margin-right: 1.2rem;
+    }
   }
   .input {
-    width: 320px;
-    height: 45px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 8px 12px;
+    height: 100%;
+    width: 100%;
     font-family: Lato;
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
-    line-height: 24px;
+    padding: 8px 12px;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
     color: $gray-4;
     outline-width: 0;
-    box-sizing: border-box;
-    border-radius: 8px;
-    &.icon-true {
-      padding-left: 42px;
-    }
-    &.default {
-      border: 1px solid #b7b7b8;
-    }
-    &.success {
-      border: 1px solid #04d847;
-    }
-    &.warning {
-      border: 1px solid #e4b200;
-    }
-    &.error {
-      border: 1px solid #e40029;
-    }
+    border: unset;
+    border-radius: 0.8rem;
   }
 
-  .input:hover {
-    border: 1px solid #28a9fa;
+  &.hover {
+    border: 1px solid $brand-blue-4;
     box-shadow: 0px 0px 4px rgba(0, 109, 199, 0.4);
   }
 
-  .input:focus-visible {
-    border: 1px solid #006dc7;
+  &.focus {
+    border: 1px solid $brand-blue-6;
     box-shadow: 0px 0px 4px rgba(0, 109, 199, 0.4);
+    svg {
+      color: $gray-8;
+    }
   }
   // this setts the collors for icons and input
-  .input:focus-visible + .icon {
-    color: $gray-8;
-  }
   .input[type="text"] {
     color: $gray-8;
   }

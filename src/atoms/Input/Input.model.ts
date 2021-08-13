@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-type InputStyleTypes = "default" | "success" | "error" | "warning";
+type InputVariantTypes = "default" | "success" | "error" | "warning";
 
 type InputFieldTypes =
   | "text"
@@ -11,7 +11,7 @@ type InputFieldTypes =
   | "textarea";
 
 export interface ICustomInput {
-  style?: InputStyleTypes;
+  variant?: InputVariantTypes;
   type?: InputFieldTypes;
   placeholder?: string;
   size?: "lg" | "sm";

@@ -1,2 +1,2 @@
-export { default as Label } from "./Label";
-export * from "./Label.model";
+export { default as Label } from "./InputLabel";
+export * from "./InputLabel.model";

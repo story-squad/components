@@ -1,8 +1,8 @@
 import { classnames } from "@story-squad/react-utils";
 import React, { useState } from "react";
-import { ICustomInput } from "./Input.model";
+import { ICustomInput } from "./Inputfield.model";
 
-const Input = ({
+const Inputfield = ({
   iconLeft,
   iconRight,
   variant,
@@ -41,4 +41,4 @@ const Input = ({
   );
 };
 
-export default Input;
+export default Inputfield;

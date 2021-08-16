@@ -14,7 +14,6 @@ export interface ICustomInput {
   variant?: InputVariantTypes;
   type?: InputFieldTypes;
   placeholder?: string;
-  size?: "lg" | "sm";
   iconLeft?: ReactNode;
   iconRight?: ReactNode;
 }

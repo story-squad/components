@@ -27,12 +27,16 @@
     }
   }
   .input {
-    height: 100%;
     width: 100%;
     font-family: Lato;
     font-style: normal;
     font-weight: normal;
     padding: 8px 12px;
+    //hack but fixes chrome default styling
+    &[type="date"],
+    &[type="time"] {
+      padding: 7px 12px;
+    }
     font-size: 1.6rem;
     line-height: 2.4rem;
     color: $gray-4;

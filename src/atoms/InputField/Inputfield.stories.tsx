@@ -1,15 +1,15 @@
 import { Meta, Story } from "@storybook/react";
 import React from "react";
 import { FiUser } from "react-icons/fi";
-import { Input } from ".";
-import { ICustomInput } from "./Input.model";
-import "./input.scss";
+import { Inputfield } from ".";
+import { ICustomInput } from "./Inputfield.model";
+import "./inputfield.scss";
 
 type Props = React.PropsWithChildren<ICustomInput>;
 
 const Template: Story<Props> = ({ iconLeft, iconRight, ...props }) => (
   <div style={{ width: 320 }}>
-    <Input
+    <Inputfield
       iconLeft={iconLeft && <FiUser />}
       iconRight={iconRight && <FiUser />}
       {...props}
@@ -21,8 +21,8 @@ const Template: Story<Props> = ({ iconLeft, iconRight, ...props }) => (
 export const Interactive = Template.bind({});
 
 export default {
-  title: "Components/Atoms/Input",
-  component: Input,
+  title: "Components/Atoms/Inputfield",
+  component: Inputfield,
   argTypes: {
     type: {
       options: ["date", "text", "email", "date", "time", "textarea"],

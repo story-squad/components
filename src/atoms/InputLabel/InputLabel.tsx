@@ -2,15 +2,15 @@ import React from "react";
 import { FiHelpCircle } from "react-icons/fi";
 import { ICustomLabelProps } from "./InputLabel.model";
 const Label = ({
-  value = "INPUT LABEL",
+  value,
   toolTip,
-  type,
+  labelType,
 }: React.PropsWithChildren<ICustomLabelProps>): React.ReactElement => {
   return (
     <label className="label">
-      <span className="require">{type === "required" && "*"}</span>
+      <span className="require">{labelType === "required" && "*"}</span>
       {value} {toolTip ? <FiHelpCircle className="optional" /> : ""}
-      <span className="optional">{type === "optional" && "(optional)"}</span>
+      <span className="optional">{labelType === "optional" && "(optional)"}</span>
     </label>
   );
 };

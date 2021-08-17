@@ -1,5 +1,7 @@
+type LabelType = "default" | "required" | "optional";
+
 export interface ICustomLabelProps {
   value?: string;
-  type?: "default" | "required" | "optional";
+  labelType?: LabelType;
   toolTip?: boolean;
 }

@@ -6,7 +6,9 @@ import "./inputlabel.scss";
 
 type Props = React.PropsWithChildren<ICustomLabelProps>;
 
-const Template: Story<Props> = ({ ...props }) => <Label {...props} />;
+const Template: Story<Props> = ({ value = "INPUT LABEL", ...props }) => (
+  <Label value={value} {...props} />
+);
 
 export const Interactive = Template.bind({});
 

@@ -1,14 +1,14 @@
 import { classnames } from "@story-squad/react-utils";
 import React, { useState } from "react";
-import { ICustomInput } from "./Inputfield.model";
+import { ICustomInputProps } from "./Inputfield.model";
 
 const Inputfield = ({
   iconLeft,
   iconRight,
   variant,
-  type,
+  inputType,
   placeholder,
-}: React.PropsWithChildren<ICustomInput>): React.ReactElement => {
+}: React.PropsWithChildren<ICustomInputProps>): React.ReactElement => {
   const [isFocused, setFocused] = useState(false);
   const [isHover, setHover] = useState(false);
 
@@ -33,7 +33,7 @@ const Inputfield = ({
         className="input"
         onFocus={focus}
         onBlur={unfocus}
-        type={type}
+        type={inputType}
         placeholder={placeholder}
       />
       {iconRight}

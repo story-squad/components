@@ -1,13 +1,16 @@
 import React from "react";
 import { Inputfield, Label } from "../../atoms";
-import { ICustomInput } from "../../atoms/InputField";
+import { ICustomInputProps } from "../../atoms/InputField";
+import { ICustomLabelProps } from "../../atoms/InputLabel";
 
 const Input = ({
   ...props
-}: React.PropsWithChildren<ICustomInput>): React.ReactElement => {
+}: React.PropsWithChildren<
+  ICustomInputProps & ICustomLabelProps
+>): React.ReactElement => {
   return (
     <div>
-      <Label />
+      <Label {...props} />
       <Inputfield {...props} />
     </div>
   );

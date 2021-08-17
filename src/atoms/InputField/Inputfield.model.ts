@@ -10,9 +10,9 @@ type InputFieldTypes =
   | "time"
   | "textarea";
 
-export interface ICustomInput {
+export interface ICustomInputProps {
   variant?: InputVariantTypes;
-  type?: InputFieldTypes;
+  inputType?: InputFieldTypes;
   placeholder?: string;
   iconLeft?: ReactNode;
   iconRight?: ReactNode;

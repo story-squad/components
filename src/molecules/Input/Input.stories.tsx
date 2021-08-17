@@ -3,13 +3,14 @@ import React from "react";
 import { FiYoutube } from "react-icons/fi";
 import { Input } from ".";
 
-const Template: Story = ({ ...props }) => (
+const Template: Story = ({ iconLeft, iconRight, ...props }) => (
   <div style={{ width: 325 }}>
     <Input
+      value="INPUT LABEL"
       {...props}
-      variant="default"
       placeholder="Placeholder Text"
-      iconLeft={<FiYoutube />}
+      iconLeft={iconLeft && <FiYoutube />}
+      iconRight={iconRight && <FiYoutube />}
     />
   </div>
 );
@@ -19,4 +20,51 @@ export const Interactive = Template.bind({});
 export default {
   title: "Components/Molecules/Input",
   component: Input,
+  argTypes: {
+    inputType: {
+      options: ["date", "text", "email", "date", "time", "textarea"],
+      control: {
+        type: "radio",
+        labels: {
+          date: "date",
+          text: "text",
+          email: "email",
+          // phone: "phone",
+          time: "time",
+          textarea: "textarea",
+        },
+      },
+      defaultValue: "text",
+    },
+    variant: {
+      options: ["default", "warning", "success", "error"],
+      control: { type: "radio" },
+      labels: { default: "default" },
+      defaultValue: "default",
+    },
+    iconLeft: {
+      control: { type: "boolean" },
+      defaultValue: false,
+    },
+    iconRight: {
+      control: { type: "boolean" },
+      defaultValue: false,
+    },
+    labelType: {
+      options: ["default", "required", "optional"],
+      control: {
+        type: "radio",
+        labels: {
+          default: "default",
+          required: "required",
+          optional: "optional",
+        },
+      },
+      defaultValue: "default",
+    },
+    toolTip: {
+      control: { type: "boolean" },
+      defaultValue: false,
+    },
+  },
 } as Meta;

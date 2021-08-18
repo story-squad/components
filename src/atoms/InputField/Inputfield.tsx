@@ -1,6 +1,6 @@
 import { classnames } from "@story-squad/react-utils";
 import React, { useState } from "react";
-import { ICustomInputProps } from "./Inputfield.model";
+import { ICustomInputProps } from "./InputField.model";
 
 const Inputfield = ({
   iconLeft,

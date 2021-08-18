@@ -2,13 +2,13 @@ import { Meta, Story } from "@storybook/react";
 import React from "react";
 import { FiUser } from "react-icons/fi";
 import { Inputfield } from ".";
-import { ICustomInputProps } from "./Inputfield.model";
+import { ICustomInputProps } from "./InputField.model";
 import "./inputfield.scss";
 
 type Props = React.PropsWithChildren<ICustomInputProps>;
 
 const Template: Story<Props> = ({ iconLeft, iconRight, ...props }) => (
-  <div style={{ width: 320 }}>
+  <div style={{ maxWidth: 320 }}>
     <Inputfield
       iconLeft={iconLeft && <FiUser />}
       iconRight={iconRight && <FiUser />}

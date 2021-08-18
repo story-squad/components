@@ -6,8 +6,8 @@ import "./inputlabel.scss";
 
 type Props = React.PropsWithChildren<ICustomLabelProps>;
 
-const Template: Story<Props> = ({ value = "INPUT LABEL", ...props }) => (
-  <Label value={value} {...props} />
+const Template: Story<Props> = ({ label = "INPUT LABEL", ...props }) => (
+  <Label label={label} {...props} />
 );
 
 export const Interactive = Template.bind({});
@@ -16,7 +16,7 @@ export default {
   title: "Components/Atoms/label",
   component: Label,
   argTypes: {
-    type: {
+    labelType: {
       options: ["default", "required", "optional"],
       control: {
         type: "radio",

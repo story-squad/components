@@ -1,2 +1,2 @@
-export { default as Inputfield } from "./Inputfield";
-export * from "./Inputfield.model";
+export { default as Inputfield } from "./InputField";
+export * from "./InputField.model";

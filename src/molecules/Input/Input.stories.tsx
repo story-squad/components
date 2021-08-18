@@ -6,7 +6,7 @@ import { Input } from ".";
 const Template: Story = ({ iconLeft, iconRight, ...props }) => (
   <div style={{ width: 325 }}>
     <Input
-      value="INPUT LABEL"
+      label="INPUT LABEL"
       {...props}
       placeholder="Placeholder Text"
       iconLeft={iconLeft && <FiYoutube />}

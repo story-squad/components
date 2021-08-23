@@ -2,7 +2,7 @@ import { Meta, Story } from "@storybook/react";
 import React from "react";
 import { Label } from ".";
 import { ICustomLabelProps } from "./InputLabel.model";
-import "./inputlabel.scss";
+import "./inputLabel.scss";
 
 type Props = React.PropsWithChildren<ICustomLabelProps>;
 

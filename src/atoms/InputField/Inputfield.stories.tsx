@@ -3,7 +3,7 @@ import React from "react";
 import { FiUser } from "react-icons/fi";
 import { Inputfield } from ".";
 import { ICustomInputProps } from "./InputField.model";
-import "./inputfield.scss";
+import "./inputField.scss";
 
 type Props = React.PropsWithChildren<ICustomInputProps>;
 

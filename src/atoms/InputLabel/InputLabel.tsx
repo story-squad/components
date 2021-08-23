@@ -1,6 +1,9 @@
 import React from "react";
 import { FiHelpCircle } from "react-icons/fi";
 import { ICustomLabelProps } from "./InputLabel.model";
+import "./inputLabel.scss";
+
+
 const Label = ({
   label,
   toolTip,

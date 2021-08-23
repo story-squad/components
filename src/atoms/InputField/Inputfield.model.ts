@@ -16,4 +16,6 @@ export interface ICustomInputProps {
   placeholder?: string;
   iconLeft?: ReactNode;
   iconRight?: ReactNode;
+  // the message is for the error message on the input
+  message?: string;
 }

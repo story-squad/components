@@ -2,6 +2,7 @@ import { Meta, Story } from "@storybook/react";
 import React from "react";
 import { FiYoutube } from "react-icons/fi";
 import { Input } from ".";
+import "./input.scss";
 
 const Template: Story = ({ iconLeft, iconRight, ...props }) => (
   <div style={{ width: 325 }}>
@@ -65,6 +66,15 @@ export default {
     toolTip: {
       control: { type: "boolean" },
       defaultValue: false,
+    },
+    message: {
+      options: [
+        "Please Enter Your Email",
+        "Please Enter You Name",
+        "Please Fill In Your email",
+        "",
+      ],
+      control: { type: "radio" },
     },
   },
 } as Meta;

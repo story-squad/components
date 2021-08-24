@@ -67,7 +67,7 @@ export default {
       control: { type: "boolean" },
       defaultValue: false,
     },
-    message: {
+    error: {
       options: [
         "Please Enter Your Email",
         "Please Enter You Name",

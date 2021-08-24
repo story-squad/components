@@ -1,19 +1,24 @@
 import React from "react";
-import { Inputfield, Label } from "../../atoms";
-import { ICustomInputProps } from "../../atoms/InputField";
-import { ICustomLabelProps } from "../../atoms/InputLabel";
+import { IInputFieldProps, InputField } from "../../atoms/InputField";
+import { ILabelProps, InputLabel } from "../../atoms/InputLabel";
 import "./input.scss";
 
-const Input = (
-  props: React.PropsWithChildren<ICustomInputProps & ICustomLabelProps>
-): React.ReactElement => {
+const Input = ({
+  label,
+  labelType,
+  toolTip,
+  error,
+  ...props
+}: IInputFieldProps & ILabelProps): React.ReactElement => {
   return (
     <div>
-      <Label {...props} />
-      <Inputfield {...props} />
-      <div className="message">
-        <span>{props.message}</span>
-      </div>
+      <InputLabel label={label} labelType={labelType} toolTip={toolTip} />
+      <InputField {...props} />
+      {error && (
+        <div className="message">
+          <span>{error}</span>
+        </div>
+      )}
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-type InputVariantTypes = "default" | "success" | "error" | "warning";
+type InputVariants = "default" | "success" | "error" | "warning";
 
 type InputFieldTypes =
   | "text"
@@ -10,12 +10,12 @@ type InputFieldTypes =
   | "time"
   | "textarea";
 
-export interface ICustomInputProps {
-  variant?: InputVariantTypes;
+export interface IInputFieldProps {
+  variant?: InputVariants;
   inputType?: InputFieldTypes;
   placeholder?: string;
   iconLeft?: ReactNode;
   iconRight?: ReactNode;
   // the message is for the error message on the input
-  message?: string;
+  error?: string;
 }

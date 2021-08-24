@@ -1,22 +1,22 @@
 import { classnames } from "@story-squad/react-utils";
 import React, { useState } from "react";
-import { ICustomInputProps } from "./InputField.model";
-import "./inputField.scss";
+import { IInputFieldProps } from "./InputField.model";
+import "./inputfield.scss";
 
-const Inputfield = ({
+const InputField = ({
   iconLeft,
   iconRight,
   variant,
   inputType,
   placeholder,
-}: React.PropsWithChildren<ICustomInputProps>): React.ReactElement => {
+}: IInputFieldProps): React.ReactElement => {
   const [isFocused, setFocused] = useState(false);
-  const [isHover, setHover] = useState(false);
+  const [isHovered, setHovered] = useState(false);
 
   const focus = () => setFocused(true);
   const unfocus = () => setFocused(false);
-  const hover = () => setHover(true);
-  const unhover = () => setHover(false);
+  const hover = () => setHovered(true);
+  const unhover = () => setHovered(false);
 
   return (
     <div
@@ -25,7 +25,7 @@ const Inputfield = ({
       className={classnames(
         "input-wrapper",
         variant,
-        isHover && "hover",
+        isHovered && "hover",
         isFocused && "focus"
       )}
     >
@@ -42,4 +42,4 @@ const Inputfield = ({
   );
 };
 
-export default Inputfield;
+export default InputField;

@@ -1,7 +1,7 @@
-type LabelType = "default" | "required" | "optional";
+type LabelTypes  = "default" | "required" | "optional";
 
-export interface ICustomLabelProps {
+export interface ILabelProps {
   label?: string;
-  labelType?: LabelType;
+  labelType?: LabelTypes;
   toolTip?: boolean;
 }

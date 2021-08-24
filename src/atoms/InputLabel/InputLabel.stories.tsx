@@ -1,20 +1,20 @@
 import { Meta, Story } from "@storybook/react";
 import React from "react";
-import { Label } from ".";
-import { ICustomLabelProps } from "./InputLabel.model";
-import "./inputLabel.scss";
+import { InputLabel } from ".";
+import { ILabelProps } from "./InputLabel.model";
+import "./inputlabel.scss";
 
-type Props = React.PropsWithChildren<ICustomLabelProps>;
+type Props = ILabelProps;
 
 const Template: Story<Props> = ({ label = "INPUT LABEL", ...props }) => (
-  <Label label={label} {...props} />
+  <InputLabel label={label} {...props} />
 );
 
 export const Interactive = Template.bind({});
 
 export default {
-  title: "Components/Atoms/label",
-  component: Label,
+  title: "Components/Atoms/InputLabel",
+  component: InputLabel,
   argTypes: {
     labelType: {
       options: ["default", "required", "optional"],

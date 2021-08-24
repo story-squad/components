@@ -1,11 +1,12 @@
 @import "../../styles/variables.scss";
+@import "../../styles/fonts.scss";
 
 .label {
-  font-family: Mulish;
+  font-family: $mulish;
   font-style: normal;
   font-weight: bold;
-  font-size: 12px;
-  line-height: 20px;
+  font-size: 1.2rem;
+  line-height: 2rem;
   color: $gray-7;
   .require {
     color: $dust-red;
@@ -13,11 +14,11 @@
   }
   .optional {
     margin-left: 5px;
-    font-family: Lato;
+    font-family: $mulish;
     font-style: normal;
     font-weight: normal;
-    font-size: 12px;
-    line-height: 20px;
+    font-size: 1.2rem;
+    line-height: 2rem;
     color: $gray-5;
   }
 }

@@ -1,3 +1,3 @@
-export { Button } from "./Button";
-export { Inputfield } from "./InputField";
-export { Label } from "./InputLabel";
+export { Button } from './Button';
+export { InputField } from './InputField';
+export { InputLabel } from './InputLabel';

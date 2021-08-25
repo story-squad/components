@@ -1,4 +1,4 @@
-type LabelTypes  = "default" | "required" | "optional";
+type LabelTypes = 'default' | 'required' | 'optional';
 
 export interface ILabelProps {
   label?: string;

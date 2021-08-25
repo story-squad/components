@@ -1,6 +1,6 @@
 {
   "name": "@story-squad/components",
-  "version": "0.0.2",
+  "version": "0.1.1",
   "description": "A custom component library for rapid Story Squad UI development.",
   "main": "dist/index",
   "types": "dist/index",
@@ -15,7 +15,8 @@
     "preversion": "yarn lint",
     "version": "yarn format && git add -A src",
     "postversion": "git push && git push --tags",
-    "sb:start": "start-storybook -p 6006",
+    "sb": "start-storybook -p 6006",
+    "sb:start": "yarn sb",
     "sb:build": "build-storybook"
   },
   "repository": {

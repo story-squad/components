@@ -1,14 +1,14 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react';
 
-type InputVariants = "default" | "success" | "error" | "warning";
+type InputVariants = 'default' | 'success' | 'error' | 'warning';
 
 type InputFieldTypes =
-  | "text"
-  | "email"
+  | 'text'
+  | 'email'
   // | "phone"
-  | "date"
-  | "time"
-  | "textarea";
+  | 'date'
+  | 'time'
+  | 'textarea';
 
 export interface IInputFieldProps {
   variant?: InputVariants;

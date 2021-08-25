@@ -1,8 +1,7 @@
-import { Meta, Story } from "@storybook/react";
-import React from "react";
-import { FiYoutube } from "react-icons/fi";
-import { Input } from ".";
-import "./input.scss";
+import { Meta, Story } from '@storybook/react';
+import React from 'react';
+import { FiYoutube } from 'react-icons/fi';
+import { Input } from '.';
 
 const Template: Story = ({ iconLeft, iconRight, ...props }) => (
   <div style={{ width: 325 }}>
@@ -19,62 +18,62 @@ const Template: Story = ({ iconLeft, iconRight, ...props }) => (
 export const Interactive = Template.bind({});
 
 export default {
-  title: "Components/Molecules/Input",
+  title: 'Components/Molecules/Input',
   component: Input,
   argTypes: {
     inputType: {
-      options: ["date", "text", "email", "date", "time", "textarea"],
+      options: ['date', 'text', 'email', 'date', 'time', 'textarea'],
       control: {
-        type: "radio",
+        type: 'radio',
         labels: {
-          date: "date",
-          text: "text",
-          email: "email",
+          date: 'date',
+          text: 'text',
+          email: 'email',
           // phone: "phone",
-          time: "time",
-          textarea: "textarea",
+          time: 'time',
+          textarea: 'textarea',
         },
       },
-      defaultValue: "text",
+      defaultValue: 'text',
     },
     variant: {
-      options: ["default", "warning", "success", "error"],
-      control: { type: "radio" },
-      labels: { default: "default" },
-      defaultValue: "default",
+      options: ['default', 'warning', 'success', 'error'],
+      control: { type: 'radio' },
+      labels: { default: 'default' },
+      defaultValue: 'default',
     },
     iconLeft: {
-      control: { type: "boolean" },
+      control: { type: 'boolean' },
       defaultValue: false,
     },
     iconRight: {
-      control: { type: "boolean" },
+      control: { type: 'boolean' },
       defaultValue: false,
     },
     labelType: {
-      options: ["default", "required", "optional"],
+      options: ['default', 'required', 'optional'],
       control: {
-        type: "radio",
+        type: 'radio',
         labels: {
-          default: "default",
-          required: "required",
-          optional: "optional",
+          default: 'default',
+          required: 'required',
+          optional: 'optional',
         },
       },
-      defaultValue: "default",
+      defaultValue: 'default',
     },
     toolTip: {
-      control: { type: "boolean" },
+      control: { type: 'boolean' },
       defaultValue: false,
     },
     error: {
       options: [
-        "Please Enter Your Email",
-        "Please Enter You Name",
-        "Please Fill In Your email",
-        "",
+        'Please Enter Your Email',
+        'Please Enter You Name',
+        'Please Fill In Your email',
+        '',
       ],
-      control: { type: "radio" },
+      control: { type: 'radio' },
     },
   },
 } as Meta;

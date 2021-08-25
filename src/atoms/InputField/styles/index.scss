@@ -1,5 +1,5 @@
-@import "../../styles/variables.scss";
-@import "../../styles/fonts.scss";
+@import '../../../styles/variables.scss';
+@import '../../../styles/fonts.scss';
 
 .input-wrapper {
   display: flex;
@@ -34,8 +34,8 @@
     font-weight: normal;
     padding: 8px 12px;
     //hack but fixes chrome default styling
-    &[type="date"],
-    &[type="time"] {
+    &[type='date'],
+    &[type='time'] {
       padding: 7px 12px;
     }
     font-size: 1.6rem;

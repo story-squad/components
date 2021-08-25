@@ -61,7 +61,7 @@ HideScrollButtons.decorators = [
 ];
 
 export default {
-  title: 'Components/Atomic/Carousel',
+  title: 'Components/Templates/Carousel',
   component: CarouselContainer,
   parameters: { layout: 'fullscreen' },
 } as Meta;

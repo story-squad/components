@@ -1,0 +1,88 @@
+// Base styles
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+html {
+  overflow: hidden;
+  --color-backing-light1: #b6cff3;
+}
+
+.card-scene {
+  width: 18rem;
+  height: 20rem;
+  perspective: 200px;
+}
+.card {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateY(180deg);
+  &.card--flipped {
+    animation: cardFlip 0.275s forwards linear;
+  }
+  &.card--unflip {
+    animation: cardUnFlip 0.275s forwards linear;
+  }
+}
+@keyframes cardFlip {
+  0% {
+    transform: rotateZ(0deg) rotateY(180deg);
+  }
+  50% {
+    transform: rotateZ(-10deg) rotateY(90deg);
+  }
+  100% {
+    transform: rotateZ(0deg) rotateY(0deg);
+  }
+}
+@keyframes cardUnFlip {
+  0% {
+    transform: rotateZ(0deg) rotateY(0deg);
+  }
+  50% {
+    transform: rotateZ(-10deg) rotateY(90deg);
+  }
+  100% {
+    transform: rotateZ(0deg) rotateY(180deg);
+  }
+}
+
+.card-front {
+  position: relative;
+  .main-pane {
+    height: 100%;
+    width: 100%;
+    padding: 8px;
+    overflow: hidden;
+    background: var(--color-backing-light1);
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      top: -42rem;
+      left: -32rem;
+      height: 69.5rem;
+      width: 100rem;
+      border-radius: 50%;
+    }
+  }
+}
+
+.card-backing {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 4;
+  transform: rotateY(180deg);
+  .back-main {
+    padding: 8px;
+    height: 100%;
+    width: 100%;
+    background: var(--color-backing-light1);
+    z-index: 1;
+    border-radius: 0 0 3px 3px;
+  }
+}

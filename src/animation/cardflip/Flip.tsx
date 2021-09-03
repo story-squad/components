@@ -1,26 +1,29 @@
 import React, { useState } from "react";
+import "./styles.scss";
 
 const Flip = (): React.ReactElement => {
-  const [flip, setFlip] = useState(true);
+
+  const flipFunk = () => {
+    var card = document.getElementById("card");
+    if (card?.classList.contains("card--flipped")) {
+      card.classList.add("card--unflip");
+      setTimeout(function () {
+        card?.classList.remove("card--flipped", "card--unflip");
+      }, 500);
+    } else {
+      card?.classList.add("card--flipped");
+    }
+  };
 
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignContent: "center",
-      }}
-    >
-      <div onClick={() => setFlip(!flip)} style={{ width: 100 }}>
-        {flip ? (
-          <div style={{ height: 100, width: 100, backgroundColor: "#Ff2d" }}>
-            he
-          </div>
-        ) : (
-          <div style={{ height: 100, width: 100, backgroundColor: "#3f2d" }}>
-            Heyo
-          </div>
-        )}
+    <div className="card-scene">
+      <div id="card" onClick={() => flipFunk()} className="card">
+        <div className="card-backing">
+          <div className="back-main">Cows are content.</div>
+        </div>
+        <div className="card-front">
+          <div className="main-pane">Chicken is content.</div>
+        </div>
       </div>
     </div>
   );
